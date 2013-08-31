@@ -1,8 +1,46 @@
-<div class="center hero-unit">
-<h3 align="center">遇见未来的自己</h3>
-<img src="assets/relation.png" alt="这是一张图片"/>
-</br>
-<%= link_to "马上注册", signup_path, class: "btn btn-large btn-primary" %>
+ <div class="row">
+        <div class="span6">
+          <h3><a class="btn btn-large btn-primary" href="#">知识管理 &raquo;</a></h3>
+          <ul>
+			<%@kms.each do |km|%>
+				<li><%=link_to km.title,article_path(km)%></li>
+			<%end%>
+		  </ul>
+        </div>
+
+        <div class="span6">
+          <h3><a class="btn btn-large btn-primary" href="#">java学习 &raquo;</a></h3>
+          <ul>
+			<%@javas.each do |java|%>
+				<li><%=link_to java.title,article_path(java)%></li>
+			<%end%>
+		  </ul>         
+        </div>       
 </div>
+
+
+
+ <div class="row">
+        <div class="span6">
+          <h3><a class="btn btn-large btn-primary" href="#">脚本学习 &raquo;</a></h3>
+          <ul>
+			<%@jss.each do |js|%>
+				<li><%=link_to js.title ,article_path(js)%></li>
+			<%end%>
+		  </ul>
+        </div>
+
+        <div class="span6">
+          <h3><a class="btn btn-large btn-primary" href="#">ruby学习 &raquo;</a></h3>
+          <ul>
+			<%@rubys.each do |ruby|%>
+				<li><%=link_to ruby.title,article_path(ruby)%></li>
+			<%end%>
+		  </ul>         
+        </div>       
+</div>
+
+
+
 
 

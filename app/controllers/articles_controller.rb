@@ -30,8 +30,10 @@ class ArticlesController < ApplicationController
 
 
 	def show
-		@user = User.find(current_user)
-		@article = @user.articles.find(params[:id])
+
+		
+		@article = Article.find(params[:id])
+		@user = User.find(@article.user_id)
 		
 	end
 
