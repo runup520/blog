@@ -1,0 +1,25 @@
+			
+
+<div class="row">
+	
+    <aside class="span4">    
+      <section>
+      	<%=@user.name%></br>
+      	<%=@user.email%>
+      </section>
+    </aside> 
+    <div class="span8">
+    	<%= link_to '返回文章列表',articles_path%></br>
+    	   主题:<%=@article.title%>
+			</br>
+			主题:<%=@article.tag%>
+			</br>
+		   内容:<%=@article.content%>
+			</br>
+
+			
+
+			
+				
+    </div>
+</div>

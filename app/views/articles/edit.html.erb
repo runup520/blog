@@ -1,0 +1,39 @@
+
+<div class="row">
+    <aside class="span4">
+     
+      <section>
+        用户名：
+        <%=@user.name%></br>
+        <%=@user.email%>
+      </section>
+    </aside> 
+
+    <div class="span8">
+      <h3 align="center">知识编辑</h3>
+      <%= form_for(@article) do |f| %>
+
+      <div class="field">
+       <%= f.label :题目 %><br />
+        <%= f.text_field :title %>
+      </div>
+
+      <div class="field">
+       <%= f.label :标签 %><br />
+        <%= f.text_field :tag %>
+      </div>
+
+      <div class="field">
+        <%= f.label :内容 %><br />
+        <%= f.text_area :content %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit  :提交, class: "btn btn-large btn-primary"%>
+      </div>
+    <% end %>
+          
+    </div>
+</div>
+
+
