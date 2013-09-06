@@ -1,44 +1,30 @@
  <div class="row">
-        <div class="span6">
+        <div class="span8">
           <h3><a class="btn btn-large btn-primary" href="#">知识管理 &raquo;</a></h3>
           <ul>
-			<%@kms.each do |km|%>
-				<li><%=link_to km.title,article_path(km)%></li>
+			<%@articles.each do |article|%>
+				<li><%=link_to article.title,article_path(article)%></br>
+					<%=raw article.content%>
+				</li>
 			<%end%>
 		  </ul>
         </div>
 
-        <div class="span6">
-          <h3><a class="btn btn-large btn-primary" href="#">java学习 &raquo;</a></h3>
+       
+
+        <div class="span4">
+          <h3><a class="btn btn-large btn-primary" href="#">列表</a></h3>
           <ul>
-			<%@javas.each do |java|%>
-				<li><%=link_to java.title,article_path(java)%></li>
-			<%end%>
+			<li><%=link_to '知识管理',km_path%></li>
+			<li><%=link_to 'ruby学习',ruby_path%></li>
+			<li><%=link_to 'java学习',java_path%></li>
+			<li><%=link_to '脚本学习',js_path%></li>
 		  </ul>         
-        </div>       
+        </div>      
 </div>
 
 
 
- <div class="row">
-        <div class="span6">
-          <h3><a class="btn btn-large btn-primary" href="#">脚本学习 &raquo;</a></h3>
-          <ul>
-			<%@jss.each do |js|%>
-				<li><%=link_to js.title ,article_path(js)%></li>
-			<%end%>
-		  </ul>
-        </div>
-
-        <div class="span6">
-          <h3><a class="btn btn-large btn-primary" href="#">ruby学习 &raquo;</a></h3>
-          <ul>
-			<%@rubys.each do |ruby|%>
-				<li><%=link_to ruby.title,article_path(ruby)%></li>
-			<%end%>
-		  </ul>         
-        </div>       
-</div>
 
 
 

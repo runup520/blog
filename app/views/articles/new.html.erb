@@ -1,3 +1,5 @@
+
+
 <div class="row">
     <aside class="span4">    
       <section>
@@ -18,15 +20,16 @@
 
   <div>
     <%= f.label :标签 %><br />
-    <%= f.select :tag, options_for_select([['知识管理'], ['java开发'], ['ruby开发'], ['脚本语言']])%>
+    <%= f.text_field :tag%>
 
 
   </div>
     
   <div class="field">
     <%= f.label :内容 %><br />
-    <%= f.text_area :content %>
+    <%= f.kindeditor :content, :width => 670, :height => 400, :langType => 'en' %> 
   </div>
+  
   <div class="actions">
     <%= f.submit  :提交 , class: "btn btn-large btn-primary" %>
   </div>

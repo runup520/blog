@@ -17,6 +17,10 @@ Chapter3::Application.routes.draw do
  match '/signin', to: 'sessions#new'
  match '/signout', to: 'sessions#destroy', via: :delete
 
+match '/km',  to: 'static_pages#km'
+match '/java',  to: 'static_pages#java'
+match '/ruby',  to: 'static_pages#ruby'
+match '/js',  to: 'static_pages#js'
 
 
   # The priority is based upon order of creation:

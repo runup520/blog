@@ -1,0 +1,6 @@
+<ul>
+<%@rubys.each do |ruby|%>
+	<li><%=link_to ruby.title,article_path(ruby)%></br>
+		<%=ruby.content%></li>
+<%end%>
+</ul>

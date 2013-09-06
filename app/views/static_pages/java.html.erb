@@ -1,0 +1,6 @@
+<ul>
+<%@javas.each do |java|%>
+	<li><%=link_to java.title,article_path(java)%></br>
+		<%=java.content%></li>
+<%end%>
+</ul>

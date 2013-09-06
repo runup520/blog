@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
 
 	def index
 		@user = User.find(current_user)
-		@article = @user.articles.all
+		@articles = Article.page(params[:page])
 	end
 
 	def edit
