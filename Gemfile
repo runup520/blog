@@ -1,4 +1,5 @@
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org' 
+
 gem 'rails', '3.2.13'
 gem 'bootstrap-sass', '2.0.4'
 gem 'bcrypt-ruby', '3.0.1'
@@ -6,6 +7,7 @@ gem 'bcrypt-ruby', '3.0.1'
 
 gem 'rails_kindeditor', '0.4.0'
 gem 'kaminari'
+gem 'bootstrap-kaminari-views'
 
 group :development, :test do
 gem 'sqlite3', '1.3.5'

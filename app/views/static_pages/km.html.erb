@@ -1,7 +1,7 @@
 <ul>
 <%@kms.each do |km|%>
 	<li><%=link_to km.title,article_path(km)%></br>
-		<%=km.content%></li>
+		<%=raw km.content%></li>
 <%end%>
 </ul>
 

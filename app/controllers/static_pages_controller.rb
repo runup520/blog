@@ -3,9 +3,9 @@ class StaticPagesController < ApplicationController
   def home
   	@kms = Article.where("tag = '知识管理'")
     @javas = Article.where("tag = 'java开发'")
-    @rubys = Article.where("tag = 'ruby开发'")
+    @rails = Article.where("tag = 'rails开发'")
     @jss = Article.where("tag = '脚本语言'")
-    @articles = Article.all
+    @articles = Article.page(params[:page]).per(4)
   end
 
   def help
@@ -25,8 +25,8 @@ class StaticPagesController < ApplicationController
     @javas = Article.where("tag = 'java开发'")
   end
 
-  def ruby
-    @rubys = Article.where("tag = 'ruby开发'")
+  def rails
+    @rails = Article.where("tag = 'rails开发'")
   end
 
   def js

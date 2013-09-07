@@ -1,6 +1,15 @@
  <div class="row">
-        <div class="span8">
-          <h3><a class="btn btn-large btn-primary" href="#">知识管理 &raquo;</a></h3>
+        <div class="span10">
+
+         <section>
+           <h3><small>关注互联网、个人自我管理</small></h3>
+           
+           <hr>
+        </section>
+
+        <section>
+        <%=paginate @articles, :theme => 'twitter-bootstrap' %>
+          
           <ul>
 			<%@articles.each do |article|%>
 				<li><%=link_to article.title,article_path(article)%></br>
@@ -8,18 +17,48 @@
 				</li>
 			<%end%>
 		  </ul>
+		<section>
         </div>
 
-       
 
-        <div class="span4">
-          <h3><a class="btn btn-large btn-primary" href="#">列表</a></h3>
+
+        <div class="span2">
+
+
+	      <section align="left">  
+	      	    &nbsp;&nbsp;&nbsp;<img src="assets/zhengjiajun.jpg">
+	      	   
+	      	
+
+	      </section>
+
+	      <section>
+	         
+	         	 &nbsp;&nbsp;<i class="icon-chevron-right"></i>热爱互联网</br>
+	         	 &nbsp;&nbsp;<i class="icon-chevron-right"></i>浙江大学</br>
+	         	 &nbsp;&nbsp;<i class="icon-chevron-right"></i><a href="www.huyou.biz">常山胡柚</a>
+	         
+	      </section>
+
+	      <section>   
+          
+	      </br>
+	      </br>
+	      </br>
+	      </br>
+	      </br>
+	      </br>
+
           <ul>
-			<li><%=link_to '知识管理',km_path%></li>
-			<li><%=link_to 'ruby学习',ruby_path%></li>
-			<li><%=link_to 'java学习',java_path%></li>
-			<li><%=link_to '脚本学习',js_path%></li>
-		  </ul>         
+           
+			<li><%=link_to '知识管理',km_path%>(<%=@kms.count%>)</li>
+			<li><%=link_to 'rails开发',rails_path%>(<%=@rails.count%>)</li>
+			<li><%=link_to 'java学习',java_path%>(<%=@javas.count%>)</li>
+			<li><%=link_to '脚本学习',js_path%>(<%=@jss.count%>)</li>
+		  </ul>
+
+		  </section>
+
         </div>      
 </div>
 

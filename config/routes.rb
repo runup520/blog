@@ -19,7 +19,7 @@ Chapter3::Application.routes.draw do
 
 match '/km',  to: 'static_pages#km'
 match '/java',  to: 'static_pages#java'
-match '/ruby',  to: 'static_pages#ruby'
+match '/rails',  to: 'static_pages#rails'
 match '/js',  to: 'static_pages#js'
 
 

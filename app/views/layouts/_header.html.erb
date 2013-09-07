@@ -3,9 +3,7 @@
     <div class="container">
       <%= link_to "迈向产品经理", root_path, id: "logo" %>
       <nav>
-        <ul class="nav pull-right">
-          <li><%= link_to "主页", root_path %></li>
-         
+        <ul class="nav pull-right">       
           <% if signed_in? %>
             <li><%= link_to "用户群", users_path %></li>
             <li><%= link_to "发布知识", articles_path %></li>
@@ -23,7 +21,10 @@
               </ul>
             </li>
           <% else %>
-            <li><%= link_to "登录", signin_path %></li>
+                
+                <li><%= link_to "关于作者", about_url%></li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+               <!--  <li><a href="http://localhost:3000/about">关于作者&nbsp;&nbsp;&nbsp;</a></li> -->
           <% end %>
         </ul>
       </nav>
